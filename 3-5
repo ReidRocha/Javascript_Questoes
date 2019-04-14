@@ -1,0 +1,42 @@
+//QUESTAO 3
+var a;
+a = parseInt(prompt("Digite um número: "));
+var b = somatorio(a);
+
+function somatorio(a){
+	var c = 0;
+  var soma = 0;
+  while(c<=a){
+  	c = c+3; //multiplos
+    if(c<=a){
+    	soma = c + soma;
+    }
+    else{
+    	break;
+    }
+  }
+  return soma;
+}
+
+document.write(b);
+
+//QUESTÃO 5
+var a = [];
+for(var i = 0; i < 10; i++){
+   a.push({valor: parseInt(prompt("Digite um número"))});
+}
+var p = parseInt(prompt("Valor para pesquisa: "));
+var result = pesquisa(a,p);
+
+function pesquisa(a,p){
+  for(var i=0; i<a.length; i++) {
+    if(a[i].valor === p) {
+        return "Valor encontrado: "+p;
+    }
+    else{
+      return -1;
+    }
+  }
+}
+
+document.write(result);
